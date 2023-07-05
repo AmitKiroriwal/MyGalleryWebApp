@@ -1,0 +1,24 @@
+﻿@model List<MyGalleryWebApp.Models.Gallery>;
+<title>Category Details</title>
+<body>
+<div class="container-fluid">
+    <h1 class="text-center">Gallery</h1>
+    <p class="text-center">The oceans cover more than 70 per cent of the Earth’s surface and the majority of life on Earth is aquatic.</p>
+
+    <div class="d-flex flex-wrap justify-content-center">
+        @foreach (var item in Model)
+        {
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <figure class="figImg">
+                        <img src="~/Images/@item.PhotoPath" class="img-thumbnail grayscale" id="imgfig">
+                        @*<figcaption id="figc"></figcaption>*@
+                    </figure>
+                </div>
+
+            }
+        
+
+    </div>
+</div>
+
+</body>
